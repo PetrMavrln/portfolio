@@ -21,12 +21,6 @@ li {
     padding: 0;  
 }
 
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
 .container {
     width: 1200px;
     margin: 0 auto;
@@ -49,7 +43,7 @@ h2 {
     content: "Junior front-end developer";
     position: absolute;
     top: -49px;
-    left: -164px;
+    left: -150px;
     font-size: 24px;
     line-height: 29px;
     letter-spacing: 0.04em;
@@ -69,14 +63,13 @@ h2 {
 
 .first-page-bottom {
     position: relative;
-    float: left;
-    margin: 0 0 100px 0;
+    display: flex;
+    margin: 0 0 180px 0;
     padding: 0;
     list-style: none;
 }
 
 .first-page-bottom li {
-    float: left;
     margin-right: 20px;
 }
 
@@ -179,12 +172,15 @@ h4 {
     margin-bottom: 269px;
 }
 
-.project-title {
-    padding-top: 80px;
+.project-one,
+.project-two,
+.project-three {
+    display: flex;
 }
 
-.projects h2 {
-    float: left;
+.project-title {
+    padding-top: 80px;
+    padding-bottom: 30px;
 }
 
 .projects a {
@@ -201,13 +197,21 @@ h4 {
     color: #454545;
 }
 
-.project-image {
-    float: right;
+.project-templ h2{
+    margin-top: 130px;
+    position: relative;
 }
 
-.project-templ h2{
-    margin-top: 133px;
-    position: relative;
+.project-one h2 {
+    margin-right: 237px;
+}
+
+.project-two h2 {
+    margin-right: 356px;
+}
+
+.project-three h2 {
+    margin-right: 342px;
 }
 
 .project-templ h2::before {
@@ -235,8 +239,8 @@ h4 {
 
 .project-templ h2::after {
     position: absolute;
-    left: -93px;
-    bottom: -20px;
+    left: -80px;
+    top: 90px;
     font-size: 14px;
     font-weight: 400;
     line-height: 17px;
@@ -280,7 +284,7 @@ h4 {
 .img-tmpl {
     margin-top: 0;
     background-color: white;
-    transition: 1s;
+    transition: transform 1s;
     object-fit: cover;
 }
 
@@ -302,8 +306,8 @@ h4 {
 /*Scroll to top*/
 .scroll-to-top {
     position: fixed;
-    bottom: 100px;
-    right: 80px;
+    bottom: 50px;
+    right: 40px;
     z-index: 9999;
     width: 34px;
     height: 29px;
@@ -324,4 +328,298 @@ h4 {
 .scroll-to-top-show {
     display: block;
 }
-/**/
+
+@media screen and (min-width: 1280px) and (max-width:1599px) {
+
+    body {
+        min-width: 1280px;
+    }
+
+    .container {
+        width: 880px;
+    }
+
+    .first-page-top {
+        margin: 401px 0 330px 254px;
+    }
+
+    .first-page-top::after {
+        right: 180px;
+    }
+
+    .first-page-bottom::after {
+        width: 880px;
+    }
+
+    .about-title::after {
+        width: 880px;
+    }
+
+    .container-two {
+        margin-left: 186px;
+    }
+
+    .projects .container-two {
+        margin-left: 55px;
+    }
+
+    .project-one h2 {
+        margin-right: 109px;
+    }
+    
+    .project-two h2 {
+        margin-right: 228px;
+    }
+    
+    .project-three h2 {
+        margin-right: 214px;
+    }
+
+}
+
+@media screen and (min-width: 1024px) and (max-width:1279px) {
+
+    body {
+        min-width: 624px;
+    }
+
+    .container {
+        width: 624px;
+    }
+
+    .first-page-top {
+        margin: 336px 0 243px 139px;
+    }
+
+    .first-page-bottom::after {
+        width: 624px;
+        bottom: -70px;
+    }
+
+    .about-title::after {
+        width: 624px;
+        bottom: -659px;
+    }
+
+    .first-page-top::after {
+        right: 40px;
+    }
+
+    .first-page-bottom {
+        margin: 0 0 150px 0;
+    }
+
+    .container-two {
+        margin-left: 135px;
+    }
+
+    .about-text {
+        margin-top: 60px;
+        margin-bottom: 47px;
+    }
+
+    .about-skills {
+        margin-bottom: 87px;
+    }
+
+    .project-templ h2{
+        margin-top: 118px;
+        font-size: 64px;
+    }
+
+    .project-image {
+        width: 354px;
+        height: 184px;
+        margin: 81px 15px 69px 0;
+    }
+
+    .projects .container-two {
+        margin-left: 0;
+    }
+
+    .project-one h2 {
+        margin-right: 7px;
+    }
+    
+    .project-two h2 {
+        margin-right: 97px;
+    }
+    
+    .project-three h2 {
+        margin-right: 83px;
+    }
+
+    .project-image-border::before {
+        width: 354px;
+        height: 184px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:1023px) {
+    body {
+        min-width: 368px;
+    }
+
+    .container {
+        width: 368px;
+    }
+
+    .first-page-top {
+        margin: 406px 0 338px 16px;
+    }
+
+    .first-page-top h2 {
+        font-size: 72px;
+    }
+
+    .first-page-top::before {
+        left: -90px;
+        font-size: 18px;
+        line-height: 22px;
+    } 
+    
+    .first-page-top::after {
+        right: -30px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .first-page-bottom::after {
+        width: 368px;
+        bottom: -100px;
+    }
+    
+    .about-title::after {
+        width: 368px;
+        bottom: -841px;
+    }
+
+    .first-page-bottom {
+        margin: 0 0 180px 0;
+    }
+
+    .container-two {
+        margin-left: 34px;
+    }
+
+    .about-text {
+        margin-top: 60px;
+        margin-bottom: 54px;
+    }
+
+    .about-skills {
+        margin-bottom: 170px;
+    }
+
+    .project-image {
+        width: 354px;
+        height: 184px;
+        margin: 81px 15px 0 0;
+    }
+
+    .project-three .project-image {
+        margin-bottom: 69px;
+    }
+
+    .projects .container-two {
+        margin-left: 0;
+    }
+
+    .container-two h2 {
+        display: none;
+    }
+
+    .project-image-border::before {
+        width: 354px;
+        height: 184px;
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width:767px) {
+    body {
+        min-width: 308px;
+    }
+
+    .container {
+        width: 308px;
+    }
+
+    .first-page-top {
+        margin: 371px 0 220px 42px;
+    }
+
+    .first-page-top h2 {
+        font-size: 48px;
+    }
+
+    .first-page-top::before {
+        left: -45px;
+        top: -20px;
+        font-size: 12px;
+        line-height: 15px;
+    } 
+    
+    .first-page-top::after {
+        right: 10px;
+        bottom: -20px;
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    .first-page-bottom::after {
+        width: 308px;
+        bottom: -54px;
+    }
+    
+    .about-title::after {
+        width: 308px;
+        bottom: -561px;
+    }
+
+    .first-page-bottom {
+        margin: 0 0 104px 0;
+        justify-content: right;
+    }
+
+    .container-two {
+        margin-left: 0;
+    }
+
+    .about-title {
+        margin-top: 50px;
+        margin-bottom: 10px;
+    }
+
+    .about-text {
+        font-size: 14px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .about-skills {
+        margin-bottom: 0px;
+    }
+
+    .container-two h2 {
+        display: none;
+    }
+
+    .project-image {
+        width: 304px;
+        height: 231px;
+        margin: 81px 15px 0 0;
+    }
+
+    .project-three .project-image {
+        margin-bottom: 69px;
+    }
+
+    .projects .container-two {
+        margin-left: 0;
+    }
+
+    .project-image-border::before {
+        width: 304px;
+        height: 231px;
+    }
+}

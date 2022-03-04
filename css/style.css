@@ -106,8 +106,8 @@ color: #ABABAB;
     transition: stroke 0.5s ease var(--stroke-delay, 0s), stroke-dasharray 0.75s;  
 }
 
-.first-page-bottom li:nth-of-type(3) a svg {
-    width: 140px;
+.first-page-bottom li:first-child a svg {
+    width: 132px;
     stroke-dasharray: var(--offset, 69px) 294px;
 }
 
@@ -306,8 +306,8 @@ h4 {
 /*Scroll to top*/
 .scroll-to-top {
     position: fixed;
-    bottom: 50px;
-    right: 40px;
+    bottom: 20px;
+    right: 20px;
     z-index: 9999;
     width: 34px;
     height: 29px;
@@ -319,6 +319,7 @@ h4 {
     display: none;
     transition: background 0.5s;
     cursor: pointer;
+    padding: 0 10px;
 }
 
 .scroll-to-top:hover {
@@ -545,7 +546,7 @@ h4 {
     }
 
     .first-page-top {
-        margin: 371px 0 220px 42px;
+        margin: 271px 0 220px 42px;
     }
 
     .first-page-top h2 {
@@ -555,14 +556,14 @@ h4 {
     .first-page-top::before {
         left: -45px;
         top: -20px;
-        font-size: 12px;
+        font-size: 16px;
         line-height: 15px;
     } 
     
     .first-page-top::after {
         right: 10px;
         bottom: -20px;
-        font-size: 12px;
+        font-size: 16px;
         line-height: 15px;
     }
 
@@ -577,8 +578,20 @@ h4 {
     }
 
     .first-page-bottom {
-        margin: 0 0 104px 0;
+        margin: 0 0 104px 5;
         justify-content: right;
+    }
+
+    .first-page-bottom a {
+        font-size: 20px;
+    }
+
+    .first-page-bottom a svg {
+        margin-left: 5px;
+    }
+    
+    .first-page-bottom li:last-of-type a svg {
+        margin-left: 2px;
     }
 
     .container-two {
@@ -586,8 +599,8 @@ h4 {
     }
 
     .about-title {
-        margin-top: 50px;
-        margin-bottom: 10px;
+        margin: 0;
+        margin-top: -70px;
     }
 
     .about-text {
@@ -602,6 +615,10 @@ h4 {
 
     .container-two h2 {
         display: none;
+    }
+
+    .project-title {
+        padding-bottom: 0px;
     }
 
     .project-image {

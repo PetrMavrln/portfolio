@@ -63,9 +63,11 @@ h2 {
 
 .first-page-bottom {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 0 0 180px 0;
-    padding: 0;
+    padding: 0; 
     list-style: none;
 }
 
@@ -96,13 +98,16 @@ color: #ABABAB;
     position: absolute;
     left: 30px;
     bottom: 0;
-    transform: translate(-50%, 7px) translateZ(0);
+    -webkit-transform: translate(-50%, 7px) translateZ(0);
+            transform: translate(-50%, 7px) translateZ(0);
     fill: none;
     stroke: var(--stroke, var(--line));
     stroke-linecap: round;
     stroke-width: 1px;
     stroke-dasharray: var(--offset, 69px) 278px;
     stroke-dashoffset: 361px;
+    -webkit-transition: stroke 0.5s ease var(--stroke-delay, 0s), stroke-dasharray 0.75s;
+    -o-transition: stroke 0.5s ease var(--stroke-delay, 0s), stroke-dasharray 0.75s;
     transition: stroke 0.5s ease var(--stroke-delay, 0s), stroke-dasharray 0.75s;  
 }
 
@@ -175,6 +180,8 @@ h4 {
 .project-one,
 .project-two,
 .project-three {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -186,6 +193,8 @@ h4 {
 .projects a {
     color: inherit;
     text-decoration: none;
+    -webkit-transition: 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+    -o-transition: 0.3s cubic-bezier(0.76, 0, 0.24, 1);
     transition: 0.3s cubic-bezier(0.76, 0, 0.24, 1);
 }
 
@@ -247,6 +256,8 @@ h4 {
     letter-spacing: 0.04em;
     color: #ABABAB;
     opacity: 0;
+    -webkit-transition: opacity 1s cubic-bezier(0.37, 0, 0.63, 1);
+    -o-transition: opacity 1s cubic-bezier(0.37, 0, 0.63, 1);
     transition: opacity 1s cubic-bezier(0.37, 0, 0.63, 1);
 }
 
@@ -284,12 +295,19 @@ h4 {
 .img-tmpl {
     margin-top: 0;
     background-color: white;
+    -webkit-transition: -webkit-transform 1s;
+    transition: -webkit-transform 1s;
+    -o-transition: transform 1s;
     transition: transform 1s;
-    object-fit: cover;
+    transition: transform 1s, -webkit-transform 1s;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .img-tmpl:hover {
-    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
 }
 
 .project-image-border::before {
@@ -317,6 +335,8 @@ h4 {
     background: rgba(171, 171, 171, 0);
     border: 1px solid #ffffff;
     display: none;
+    -webkit-transition: background 0.5s;
+    -o-transition: background 0.5s;
     transition: background 0.5s;
     cursor: pointer;
     padding: 0 10px;
@@ -579,7 +599,9 @@ h4 {
 
     .first-page-bottom {
         margin: 0 0 104px 5;
-        justify-content: right;
+        -webkit-box-pack: right;
+            -ms-flex-pack: right;
+                justify-content: right;
     }
 
     .first-page-bottom a {
